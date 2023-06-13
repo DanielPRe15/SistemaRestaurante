@@ -6,6 +6,7 @@ namespace SistemaRestaurante.Controllers
     {
         public IActionResult Inicio()
         {
+            ViewData["usuario"] = Request.Cookies["user"];
             return View();
         }
 

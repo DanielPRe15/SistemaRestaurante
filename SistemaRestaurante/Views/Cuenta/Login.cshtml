@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Login";
+
     
 }
 
@@ -18,6 +19,10 @@
     <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
 </head>
 <body>
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="container h-100">
         <div class="d-flex justify-content-center h-100">
             <div class="user_card">
@@ -56,7 +61,7 @@
                         }
 
                         <div class="d-flex justify-content-center mt-3 login_container">
-                            <button class="btn btn-primary" type="submit">Iniciar Sesion</button>
+                            <button class="btn btn-primary" type="submit" asp-controller="Inicio" asp-action="Inicio" >Iniciar Sesion</button>
                         </div>
                     </form>
 

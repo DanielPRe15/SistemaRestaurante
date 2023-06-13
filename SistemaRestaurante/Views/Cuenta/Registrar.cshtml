@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Registrar";
+
    
 }
 
@@ -27,7 +28,7 @@
                     </div>
                     <div class="card-body">
 
-                        <form asp-controller="Cuenta" asp-action="Registrar" method="post">
+                        <form method="post">
 
                             <input class="form-control mb-3" type="text" placeholder="Nombre Completo" asp-for="Nombre" required />
                             <input class="form-control mb-3" type="password" placeholder="Contraseña" required asp-for="Clave" />

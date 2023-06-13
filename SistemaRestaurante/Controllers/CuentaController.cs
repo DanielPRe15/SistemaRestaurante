@@ -78,7 +78,17 @@ namespace SistemaRestaurante.Controllers
 
                             SqlDataReader dr = cmd.ExecuteReader();
 
-                       
+                            if (dr.Read())
+                            {
+                                Response.Cookies.Append("user", "Bienvenido " + l.Nombre);
+                                return RedirectToAction("Incio", "Inicio");
+                            }
+                            else
+                            {
+                                ViewData["error"] = "Error de credenciales";
+                            }
+
+
                             con.Close();
                         }
                     }
@@ -87,9 +97,9 @@ namespace SistemaRestaurante.Controllers
             }
             catch (Exception)
             {
-                return View("Inicio", "Inicio");
+                return View("login");
             }
-            return View("Inicio", "Inicio");
+            return View("login");
         }
 
         public ActionResult Logout()
