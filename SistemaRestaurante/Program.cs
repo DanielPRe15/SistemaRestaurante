@@ -1,7 +1,10 @@
+using SistemaRestaurante.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton(new DbContext(builder.Configuration.GetConnectionString("conexion")));
 
 var app = builder.Build();
 
@@ -22,6 +25,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Inicio}/{action=Inicio}/{id?}");
+    pattern: "{controller=Cuenta}/{action=Login}/{id?}");
 
 app.Run();
