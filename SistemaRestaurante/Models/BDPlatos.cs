@@ -1,13 +1,18 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
+using static System.Net.Mime.MediaTypeNames;
+using System.Drawing;
 
 namespace SistemaRestaurante.Models
 {
     public class BDPlatos
     {
         // Cambiar la cadena de conexion segun tu configuración
-        string cadenaConexion = "Data Source=DESKTOP-EPJTHR4;Initial Catalog=BD_RESTAURANTE;Integrated Security=True;";
-
+        string cadenaConexion = "Data Source=DESKTOP-CRJD420;" +
+        "Initial Catalog=BD_RESTAURANTE2;"+
+"Integrated Security=True;";
+       
         public List<Platos> ObtenerTodos()
         {
             List<Platos> listaPlatos = new List<Platos>();
@@ -28,7 +33,7 @@ namespace SistemaRestaurante.Models
             return listaPlatos;
         }
 
-        public Platos ObtenerPorId(Int32 id)
+        public Platos ObtenerPorId(int id)
         {
             Platos platos = new Platos();
             SqlConnection con = new SqlConnection(cadenaConexion);
@@ -46,7 +51,7 @@ namespace SistemaRestaurante.Models
             return platos;
         }
 
-        public int Crear(Int32 id, string nombre, decimal precio)
+        public int Crear(int id, string nombre, decimal precio)
         {
             SqlConnection con = new SqlConnection(cadenaConexion);
             SqlCommand cmd = new SqlCommand("spCrearPlato", con);
