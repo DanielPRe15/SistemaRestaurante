@@ -50,7 +50,70 @@ namespace SistemaRestaurante.Controllers
             ViewBag.platos = new SelectList(platos, "Id", "Nombre", idPlato);
             return View();
         }
-
+        [HttpGet]
+        public IActionResult CrearMesa3()
+        {
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", 1);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CrearMesa3(string nombre, int idPlato, int numeroMesa)
+        {
+            int nroRegistros = bdpe.Crear(nombre, idPlato, numeroMesa);
+            ViewBag.mensaje = "Pedido realizado correctamente";
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", idPlato);
+            return View();
+        }
+        [HttpGet]
+        public IActionResult CrearMesa4()
+        {
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", 1);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CrearMesa4(string nombre, int idPlato, int numeroMesa)
+        {
+            int nroRegistros = bdpe.Crear(nombre, idPlato, numeroMesa);
+            ViewBag.mensaje = "Pedido realizado correctamente";
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", idPlato);
+            return View();
+        }
+        [HttpGet]
+        public IActionResult CrearMesa5()
+        {
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", 1);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CrearMesa5(string nombre, int idPlato, int numeroMesa)
+        {
+            int nroRegistros = bdpe.Crear(nombre, idPlato, numeroMesa);
+            ViewBag.mensaje = "Pedido realizado correctamente";
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", idPlato);
+            return View();
+        }
+        [HttpGet]
+        public IActionResult CrearMesa6()
+        {
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", 1);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CrearMesa6(string nombre, int idPlato, int numeroMesa)
+        {
+            int nroRegistros = bdpe.Crear(nombre, idPlato, numeroMesa);
+            ViewBag.mensaje = "Pedido realizado correctamente";
+            List<Platos> platos = bdp.ObtenerTodos();
+            ViewBag.platos = new SelectList(platos, "Id", "Nombre", idPlato);
+            return View();
+        }
     }
 }
 

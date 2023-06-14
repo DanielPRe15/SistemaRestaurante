@@ -1,17 +1,16 @@
 ﻿@model SistemaRestaurante.Models.Pedidos
 
 @{
-    ViewData["Title"] = "CrearMesa2";
-   
+    ViewData["Title"] = "CrearMesa5";
 }
 
 <h1>Registrar Pedido</h1>
 
-<h4>MESA 2</h4>
+<h4>Mesa 5</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CrearMesa2">
+        <form asp-action="CrearMesa5">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
             <div class="form-group">
@@ -19,19 +18,20 @@
                 <input asp-for="Nombre" class="form-control" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
-           
+            
             <div class="form-group">
                 <label asp-for="NumeroMesa" class="control-label"></label>
                 <input asp-for="NumeroMesa" class="form-control" />
                 <span asp-validation-for="NumeroMesa" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="IdPlato" class="control-label">Nombre Plato</label>
                 @Html.DropDownList("Id",ViewBag.platos as SelectList)
 
                 <span asp-validation-for="IdPlato" class="text-danger"></span>
-</div>
+
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -40,6 +40,6 @@
 </div>
 
 <div>
-    <a asp-action="Mesas">Volver a Mesa</a>
+    <a asp-action="Mesas">Volver  a Mesa</a>
 </div>
 
