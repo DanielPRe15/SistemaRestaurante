@@ -3,6 +3,6 @@
     public class NumeroMesa
     {
         public int Id { get; set; }
-        public char NuMesa { get; set; }
+        public int NuMesa { get; set; }
     }
 }
