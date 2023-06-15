@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SistemaRestaurante.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <a class="btn btn-outline-success" asp-action="Crear">Crear Nuevo</a>
+</p>
+
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pass)
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.controls)*@
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.pass)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Editar", new { id = item.id }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Eliminar", new { id = item.id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
