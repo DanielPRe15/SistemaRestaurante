@@ -28,7 +28,7 @@ namespace SistemaRestaurante.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Crear(Int32 id, string nombre, decimal precio)
+        public IActionResult Crear(int id, string nombre, decimal precio)
         {
             int nroRegistros = bdp.Crear(id, nombre, precio);
             ViewBag.mensaje = "Cliente creado correctamente";

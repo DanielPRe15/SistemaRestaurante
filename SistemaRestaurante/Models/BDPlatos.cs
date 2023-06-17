@@ -17,8 +17,8 @@ namespace SistemaRestaurante.Models
         {
             List<Platos> listaPlatos = new List<Platos>();
             SqlConnection con = new SqlConnection(cadenaConexion);
-            string sql = "select * from PLATOS";
-            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM PLATOS", con);
+
 
             con.Open();
             SqlDataReader dr = cmd.ExecuteReader();

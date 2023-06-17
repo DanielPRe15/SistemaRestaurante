@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SistemaRestaurante.Models.Bebidas>
+
+@{
+    ViewData["Title"] = "Listado";
+  
+}
+
+<h1>Bebidas</h1>
+
+<p>
+    <a asp-action="Crear">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdBe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreBe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioBe)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdBe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreBe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioBe)
+            </td>
+            <td>
+                    @Html.ActionLink("Editar", "Editar", new { id=item.IdBe }) |
+           
+                    @Html.ActionLink("Eliminar", "Eliminar", new { id=item.IdBe })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
