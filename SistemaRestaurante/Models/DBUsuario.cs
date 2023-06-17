@@ -6,9 +6,7 @@ namespace SistemaRestaurante.Models
     public class DBUsuario
     {
         //cadena conexion
-        string conexion = "Data Source=(localdb)\\MSSQLLocalDB;" +
-            "Initial Catalog = RestManager;" +
-            "Integrated Security = true";
+        string conexion = "Data Source=DESKTOP-EPJTHR4;Initial Catalog=BD_RESTAURANTE;Integrated Security=True;";
 
         //listar usuarios
         public List<Usuario> listarUsuarios()
@@ -115,7 +113,7 @@ namespace SistemaRestaurante.Models
 
 
             SqlConnection con = new SqlConnection(conexion);
-            SqlCommand cmd = new SqlCommand("select * from usuario where id=@id", con);
+            SqlCommand cmd = new SqlCommand("select * from USUARIO where IdUsuario=@id", con);
             cmd.Parameters.AddWithValue("@id", id);
 
             con.Open();
