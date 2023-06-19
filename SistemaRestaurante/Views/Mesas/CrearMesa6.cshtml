@@ -25,22 +25,21 @@
                 <input asp-for="NumeroMesa" class="form-control" />
                 <span asp-validation-for="NumeroMesa" class="text-danger"></span>
             </div>
-
+            <br />
             <div class="form-group">
                 <label asp-for="IdPlato" class="control-label">Nombre Plato</label>
                 @Html.DropDownList("Id",ViewBag.platos as SelectList)
 
                 <span asp-validation-for="IdPlato" class="text-danger"></span>
-
             </div>
-
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
     <a asp-action="Mesas">Volver a Mesa</a>
 </div>

@@ -22,9 +22,11 @@ namespace SistemaRestaurante.Controllers
 
         public IActionResult Listado()
         {
-            // Muestra la lista de clientes de la BD
+            return View();
+
+            /*// Muestra la lista de pedidos de la BD
             List<Pedidos> listaPedidos = bdp.ObtenerTodos();
-            return View(listaPedidos);
+            return View(listaPedidos);*/
         }
 
 

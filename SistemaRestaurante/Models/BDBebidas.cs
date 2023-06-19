@@ -6,8 +6,8 @@ namespace SistemaRestaurante.Models
     public class BDBebidas
     {
         // Cambiar la cadena de conexion segun tu configuración
-        string cadenaConexion = "Data Source=DESKTOP-CRJD420;" +
-        "Initial Catalog=BD_RESTAURANTE2;" +
+        string cadenaConexion = "Data Source=DESKTOP-EPJTHR4;" +
+        "Initial Catalog=BD_RESTAURANTE;" +
 "Integrated Security=True;";
 
         public List<Bebidas> ObtenerTodos()

@@ -26,7 +26,7 @@
                 <span asp-validation-for="NumeroMesa" class="text-danger"></span>
             </div>
 
-
+            <br />
             <div class="form-group">
                 <label asp-for="IdPlato" class="control-label">Nombre Plato</label>
                 @Html.DropDownList("Id",ViewBag.platos as SelectList)
@@ -35,13 +35,7 @@
 
                 </div>
 
-            <div class="form-group">
-                <label asp-for="IdBebida" class="control-label">Nombre Bebida</label>
-                @Html.DropDownList("IdBe",ViewBag.bebidas as SelectList)
-
-                <span asp-validation-for="IdBebida" class="text-danger"></span>
-
-            </div>
+          <br />
 
             <div class="form-group">
                 <input type="submit" value="Crear" class="btn btn-primary" />
@@ -49,7 +43,7 @@
         </form>
     </div>
 </div>
-
+<BR />
 <div>
     <a asp-action="Mesas">Back to List</a>
 </div>
